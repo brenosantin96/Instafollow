@@ -1,12 +1,10 @@
 # InstaFollow — instruções para o Claude
 
 Ferramenta pessoal para achar **quem o dono segue no Instagram e não segue de volta** e deixar de seguir rápido, à mão.
-Responder em português do Brasil. Repositório **público**: nunca commitar exportações, backups, nomes das contas
-pessoais nem chaves (o `.gitignore` já bloqueia `*.zip`, `instafollow-backup-*.json`, `followers_*.json`,
-`following.json`, `*.keystore`).
-
-Detalhes privados (quais contas são usadas e o histórico de decisões com o dono) ficam fora do repositório, em
-`C:\Users\breno\Desktop\Breno\InstaFollow\instructions.md`. Ler esse arquivo também, se existir.
+Responder em português do Brasil. **Ler também o `instructions.md` (raiz do repositório)**: contas usadas,
+decisões do dono, como o app foi instalado no celular e o histórico. Repositório **público**: nunca commitar
+exportações, backups nem chaves (o `.gitignore` já bloqueia `*.zip`, `instafollow-backup-*.json`,
+`followers_*.json`, `following.json`, `*.keystore`).
 
 ## Estrutura
 
@@ -15,6 +13,7 @@ Detalhes privados (quais contas são usadas e o histórico de decisões com o do
 | `web/InstaFollow.html` | **A ferramenta inteira**: um HTML com CSS e JS embutidos, sem bibliotecas e sem rede. No PC abre com duplo clique (Chrome/Edge). É a única fonte da lógica. |
 | `InstaFollow.Android/` | App .NET 10 para Android (`net10.0-android`, sem MAUI; só a carga de trabalho `android`). Uma Activity com um WebView que mostra a página. |
 | `InstaFollow.slnx` | Solução para o Visual Studio. |
+| `instructions.md` | Contexto do dono e histórico. Cópia idêntica em `C:\Users\breno\Desktop\Breno\InstaFollow`: mudar aqui e copiar para lá. |
 
 ## Como a página funciona
 
