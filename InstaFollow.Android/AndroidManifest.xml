@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- The WebView needs INTERNET even for the local page; MainActivity blocks every request that is not the bundled page,
+       so nothing read by the tool leaves the phone. Profiles open in the Instagram app. -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <application android:allowBackup="false" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round"
+               android:label="@string/app_name" android:supportsRtl="true" />
+  <queries>
+    <package android:name="com.instagram.android" />
+    <intent>
+      <action android:name="android.intent.action.VIEW" />
+      <data android:scheme="https" />
+    </intent>
+  </queries>
+</manifest>

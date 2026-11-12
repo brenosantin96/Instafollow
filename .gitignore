@@ -1,0 +1,15 @@
+# Build output
+bin/
+obj/
+.vs/
+*.user
+
+# Personal data: Instagram exports and InstaFollow backups never go to the repository
+*.zip
+instafollow-backup-*.json
+followers_*.json
+following.json
+
+# Signing keys
+*.keystore
+*.jks

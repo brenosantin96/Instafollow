@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>26</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>InstaFollow.Android</RootNamespace>
+    <ApplicationId>io.github.brenosantin96.instafollow</ApplicationId>
+    <ApplicationTitle>InstaFollow</ApplicationTitle>
+    <!-- Raise both on every release: Android only installs an update over the old app when ApplicationVersion grows. -->
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <TrimMode>full</TrimMode>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <!-- A plain .apk to install straight on the phone (the default for Release is .aab, which is only for the Play Store). -->
+    <AndroidPackageFormat>apk</AndroidPackageFormat>
+    <RuntimeIdentifiers>android-arm64;android-arm</RuntimeIdentifiers>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- The whole tool is the same HTML used on the PC: one file, shared. -->
+    <AndroidAsset Include="..\web\InstaFollow.html" Link="Assets\index.html" />
+  </ItemGroup>
+</Project>
